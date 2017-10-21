@@ -64,7 +64,7 @@ public class UC01CadastrarEmpresa {
 		assertEquals(0,empresaDAO.adiciona(empresa));
 		
 	}
-	
+	//
 	@Test
 	public void CT04UC01FBCadastra_nome_vazio(){
 		empresaDAO = new EmpresaDAO(configuraDB);
