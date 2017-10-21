@@ -32,10 +32,17 @@ public class Empresa {
 
 	public String getNomeDaEmpresa() {
 		return nomeDaEmpresa;
+		
 	}
 
-	public void setNomeDaEmpresa(String nomeDaEmpresa) {
-		this.nomeDaEmpresa = nomeDaEmpresa;
+	public String setNomeDaEmpresa(String nomeDaEmpresa) {
+		String msg = "";
+		if(nomeDaEmpresa.equals("")){
+			msg = "Nome da empresa vazia.";
+		}else{
+			this.nomeDaEmpresa = nomeDaEmpresa;
+		}
+		return msg;
 	}
 
 	public String getNomeFantasia() {
@@ -58,9 +65,17 @@ public class Empresa {
 		return telefone;
 	}
 
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
-	}
+	public String setTelefone(String telefone) {
+		String msg="";
+		if(telefone.equals("")){
+			msg = "Telefone vazio.";
+		}else{
+			this.telefone = telefone;
+		}
+		return msg;	
+		}
+	
+	
 	/*
 	 * valida o cnpj
 	 */

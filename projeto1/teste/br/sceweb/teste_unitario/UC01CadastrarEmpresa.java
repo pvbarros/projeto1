@@ -65,6 +65,31 @@ public class UC01CadastrarEmpresa {
 		
 	}
 	
+	@Test
+	public void CT04UC01FBCadastra_nome_vazio(){
+		empresaDAO = new EmpresaDAO(configuraDB);
+		assertEquals("Nome da empresa vazia.", empresa.setNomeDaEmpresa(""));
+	}
+	
+	@Test
+	public void CT05UC01FBCadastra_nome_ja_cadastro(){
+		empresaDAO = new EmpresaDAO(configuraDB);
+		empresaDAO.adiciona(empresa);
+		assertEquals(0, empresaDAO.adiciona(empresa));
+	}
+	
+	@Test
+	public void CT06UC01FBCadastra_telefone_vazio(){
+		empresaDAO = new EmpresaDAO(configuraDB);
+		assertEquals("Telefone vazio.", empresa.setTelefone(""));
+	}
+	
+	public void CT07UC01FBCadastra_telefone_ja_cadastrado(){
+		empresaDAO = new EmpresaDAO(configuraDB);
+		empresaDAO.adiciona(empresa);
+		assertEquals(0, empresaDAO.adiciona(empresa));
+	}
+	
 	@After
 	public void tearDownAfterClass() throws Exception {
 		empresaDAO.exclui("89424232000180");
