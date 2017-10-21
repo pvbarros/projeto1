@@ -1,5 +1,11 @@
 package br.sceweb.servico;
 
+/**
+ * Permite configurar o BD
+ * @author Lab103
+ * @version 1.0
+ * 
+ */
 public class ConfiguraDB {
 	String url = "";
 	String driver = "";

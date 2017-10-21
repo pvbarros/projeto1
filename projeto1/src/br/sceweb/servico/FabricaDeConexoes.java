@@ -6,6 +6,12 @@ import java.sql.SQLException;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.exceptions.jdbc4.CommunicationsException;
 
+/**
+ * Permite estabelecer a conexão com o BD
+ * @author Paloma
+ * @version 1.0
+ */
+
 public class FabricaDeConexoes {
 
 	String url = "jdbc:mysql://localhost/sceweb";
