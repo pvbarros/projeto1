@@ -71,12 +71,12 @@ public class UC01CadastrarEmpresa {
 		assertEquals("Nome da empresa vazia.", empresa.setNomeDaEmpresa(""));
 	}
 	
-	@Test
-	public void CT05UC01FBCadastra_nome_ja_cadastro(){
-		empresaDAO = new EmpresaDAO(configuraDB);
-		empresaDAO.adiciona(empresa);
-		assertEquals(0, empresaDAO.adiciona(empresa));
-	}
+//	@Test
+//	public void CT05UC01FBCadastra_nome_ja_cadastro(){
+//		empresaDAO = new EmpresaDAO(configuraDB);
+//		empresaDAO.adiciona(empresa);
+//		assertEquals(0, empresaDAO.adiciona(empresa));
+//	}
 	
 	@Test
 	public void CT06UC01FBCadastra_telefone_vazio(){
@@ -84,11 +84,12 @@ public class UC01CadastrarEmpresa {
 		assertEquals("Telefone vazio.", empresa.setTelefone(""));
 	}
 	
-	public void CT07UC01FBCadastra_telefone_ja_cadastrado(){
-		empresaDAO = new EmpresaDAO(configuraDB);
-		empresaDAO.adiciona(empresa);
-		assertEquals(0, empresaDAO.adiciona(empresa));
-	}
+//	@Test
+//	public void CT07UC01FBCadastra_telefone_ja_cadastrado(){
+//		empresaDAO = new EmpresaDAO(configuraDB);
+//		empresaDAO.adiciona(empresa);
+//		assertEquals(0, empresaDAO.adiciona(empresa));
+//	}
 	
 	@After
 	public void tearDownAfterClass() throws Exception {
